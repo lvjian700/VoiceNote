@@ -8,19 +8,28 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
+  @StateObject private var speechRecognizer = SpeechRecognizer()
+  
+  var body: some View {
+    VStack {
+      Text(speechRecognizer.text)
+        .font(.largeTitle)
         .padding()
+      
+      Button(speechRecognizer.isRecording ? "Stop" : "Record") {
+        speechRecognizer.isRecording ? speechRecognizer.stopRecording() : speechRecognizer.startRecording()
+      }
+      .font(.title)
+      .padding()
+      .background(Color.blue)
+      .foregroundColor(.white)
+      .clipShape(Capsule())
     }
+  }
 }
 
 struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+  static var previews: some View {
+    ContentView()
+  }
 }

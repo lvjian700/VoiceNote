@@ -14,6 +14,7 @@
 		A9E1B8572A373A2B00783FC2 /* VoiceNoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E1B8562A373A2B00783FC2 /* VoiceNoteTests.swift */; };
 		A9E1B8612A373A2B00783FC2 /* VoiceNoteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E1B8602A373A2B00783FC2 /* VoiceNoteUITests.swift */; };
 		A9E1B8632A373A2B00783FC2 /* VoiceNoteUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E1B8622A373A2B00783FC2 /* VoiceNoteUITestsLaunchTests.swift */; };
+		A9E1B8702A373B1E00783FC2 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E1B86F2A373B1E00783FC2 /* SpeechRecognizer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		A9E1B85C2A373A2B00783FC2 /* VoiceNoteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoiceNoteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9E1B8602A373A2B00783FC2 /* VoiceNoteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceNoteUITests.swift; sourceTree = "<group>"; };
 		A9E1B8622A373A2B00783FC2 /* VoiceNoteUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceNoteUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A9E1B86F2A373B1E00783FC2 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				A9E1B8482A373A2A00783FC2 /* Assets.xcassets */,
 				A9E1B84A2A373A2A00783FC2 /* VoiceNote.entitlements */,
 				A9E1B84B2A373A2A00783FC2 /* Preview Content */,
+				A9E1B86F2A373B1E00783FC2 /* SpeechRecognizer.swift */,
 			);
 			path = VoiceNote;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9E1B8702A373B1E00783FC2 /* SpeechRecognizer.swift in Sources */,
 				A9E1B8472A373A2800783FC2 /* ContentView.swift in Sources */,
 				A9E1B8452A373A2800783FC2 /* VoiceNoteApp.swift in Sources */,
 			);
@@ -419,6 +423,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -457,6 +463,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
