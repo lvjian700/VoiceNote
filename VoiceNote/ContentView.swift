@@ -30,7 +30,7 @@ struct ContentView_Previews: PreviewProvider {
     @StateObject static var previewRecognizer = SpeechRecognizer()
 
     static var previews: some View {
-        ContentView()
+      ContentView()
             .environmentObject(previewRecognizer)
             .previewDisplayName("Default state")
     }
