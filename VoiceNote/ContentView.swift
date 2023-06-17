@@ -15,7 +15,6 @@ struct ContentView: View {
       Text(speechRecognizer.text)
         .font(.largeTitle)
         .padding()
-      
       Button(speechRecognizer.isRecording ? "Stop" : "Record") {
         speechRecognizer.isRecording ? speechRecognizer.stopRecording() : speechRecognizer.startRecording()
       }
@@ -27,9 +26,12 @@ struct ContentView: View {
     }
   }
 }
-
 struct ContentView_Previews: PreviewProvider {
-  static var previews: some View {
-    ContentView()
-  }
+    @StateObject static var previewRecognizer = SpeechRecognizer()
+
+    static var previews: some View {
+        ContentView()
+            .environmentObject(previewRecognizer)
+            .previewDisplayName("Default state")
+    }
 }
